@@ -1,0 +1,108 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Roboto, sans-serif;
+    font-size:14px;
+    color:#333;
+    min-width:226px;
+}
+
+#wrapper{
+    padding:10px;
+}
+
+#page-title{
+    text-align:center;
+    font-size:2rem;
+}
+
+.menu-item{
+    position:relative;
+    float:left;
+    margin:1%;
+    background-color:#ccc;
+    border: 2px solid #000;
+}
+
+.menu-item:nth-first-child(2){
+    background-color:slategray;
+}
+.menu-item:nth-child(3){
+    background-color:burlywood;
+}
+.menu-item:nth-last-child(1){
+    background-color:cadetblue;
+}
+
+
+#menu-title-1, #menu-title-2,
+#menu-title-3{
+    position:absolute;
+    right:-1px;top:-1px;
+    padding:5px 20px;
+    min-width:200px;
+    font-size:1.25rem;
+    font-weight:700;
+    border:1px solid #333;
+}
+
+#menu-title-1{
+    background-color:burlywood;
+}
+
+#menu-title-1:hover{
+    animation: surprise 1s ease-in-out;
+    cursor: help;
+}
+
+#menu-title-2{
+    background-color:lightslategray;
+    /*color:#ababab;*/
+}
+#menu-title-3{
+    background-color:burlywood;
+}
+
+
+.menu-item-body{
+    padding: 50px 10px 10px;
+    font-size:14px;
+    font-weight:300;
+    text-align:justify;
+
+}
+
+
+@media screen and (min-width: 992px) {
+    .menu-item{
+        width:31.33%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:991px) {
+    .menu-item{
+        width:48%;
+    }
+    .menu-item:nth-last-child(1){
+        width:98%;
+    }
+
+}
+
+
+@keyframes surprise{
+    0%{
+        transform: rotate(0deg)
+    }
+    25%{
+        transform: rotate(-90deg)
+    }
+    75%{
+        transform: rotate(90deg)
+    }
+}
